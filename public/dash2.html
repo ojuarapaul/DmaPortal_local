@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>DASHBOARD TEST PAGE</title>
+    <meta name="description" content="Portal de Meio ambiente da UFRN - Bem-vindo às boas práticas.">
+    <meta name="keywords" content="Meio ambiente, UFRN, sustentabilidade, reciclagem, arborização">
+    <meta name="language" content="Portuguese">
+    <meta property="og:title" content="Portal de meio ambiente da UFRN | UFRN e o meio ambiente" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Descubra como estamos contribuindo para um mundo mais sustentável." />
+    <meta property="og:url" content="http://www.meioambiente.ufrn.br/ufrn-e-o-meio-ambiente" />
+    <meta property="og:image" content="./img/logo-mini.jpg" />
+    <link rel="shortcut icon" href="http://localhost:3000/img/fav.png">
+    <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+
+    <div class="ufrn">
+        <!-- =========================== Intro start here =========================== -->
+
+        <section class="dash-intro">
+            <div class="dash-bg">
+                <h1>Coleta de Resíduos Recicláveis na UFRN</h1>
+                
+            </div>
+            <div class="intro-border-radius"></div>
+        </section>
+
+        <header class="head">
+            <span class="logo">
+                <a href="http://localhost:3000/index.html">
+                    <div><img src="http://localhost:3000/img/logo-of.png" alt="Logo"></div>
+                    <p>Portal de meio ambiente<br>da UFRN</p>
+                </a>
+            </span>
+            <nav class="menu">
+                <div class="menu-icon-bg">
+                    <p>Menu</p>
+                    <div class="menu-icon"></div>
+                </div>
+
+                <div class="menu-expand">
+                    <div class="menu-expand-close">
+                        <span></span>
+                    </div>
+                    <span class="menu-expand-logo logo">
+                        <a href="coleta-seletiva-solidaria.html">
+                            <img src="http://localhost:3000/img/campanha-icon.png" alt="Logo">
+                            <span>Coleta seletiva solidária da UFRN</span>
+                        </a>
+                    </span>
+                    <ul class="menu-expand-nav">
+                        <li><a href="http://localhost:3000/politica_ambiental.html">Política ambiental</a< /li>
+                        <li><a href="http://localhost:3000/ufrn-e-o-meio-ambiente.html">UFRN e o meio ambiente</a< /li>
+                        <li><a href="http://localhost:3000/infra.html">Infra</a< /li>
+                        <li><a href="http://localhost:3000/pesquisas.html">Pesquisas</a></li>
+                        <li><a class="menu-active" href="http://localhost:3000/dash.html">Dashboards</a></li>
+                        <li><a href="http://localhost:3000/infra.html#downloads">Downloads</a></li>
+                        <li><a href="http://localhost:3000/infra.html#infra-services">O que fazemos?</a></li> 
+
+                    </ul>
+                    <div class="menu-expand-cta">
+                        <a href="http://localhost:3000/contato.html" class="btn">Colabore</a>
+                    </div>
+                    <ul class="menu-expand-social social-media">
+                        <li><a href="https://www.facebook.com/dmacomunica/" target="_blank"><img
+                                    src="http://localhost:3000/img/media/facebook-logo.png" alt="Facebook" class="fb"></a></li>
+                        <li><a href="https://www.instagram.com/dmaufrn/?hl=pt-br" target="_blank"><img
+                                    src="http://localhost:3000/img/media/instagram_PNG8.png" alt="Instagram" class="ig"></a></li>
+                        <li><a href="#"><img src="http://localhost:3000/img/media/youtube-logo.png" alt="Youtube"></a></li>
+                        <li><a href="#"><img src="http://localhost:3000/img/media/twitter-logo.png" alt="Youtube"></a></li>
+                    </ul>
+                    </ul>
+            </nav>
+
+        </header>
+
+        <!-- =========================== Intro end here =============================== -->
+
+
+
+
+
+
+
+
+
+        <!-- =========================== Scroll Icon start here ============================= -->
+
+        <section class="scroll-to-top">
+            <a href="#">
+                <div class="to-top-btn">
+                    <div class="top-arrow"></div>
+                </div>
+            </a>
+        </section>
+
+        <!-- =========================== Scroll Icon end here ============================= -->
+
+
+
+
+
+
+
+
+        <!-- =========================== SERVER INIT start here ============================= -->
+        <!--section class="content"-->
+        <section class="dash-main">
+            <div class="dash-main-bg">
+                <script>
+                    var TodaysDate = new Date();
+                    var dd = TodaysDate.getDate();
+                    var mm = TodaysDate.getMonth() + 1;
+                    var yyyy = TodaysDate.getFullYear();
+                    TodaysDate = dd + "/" + mm + "/" + yyyy;
+                    document.write("<span class='week'> Atualizado para a data de hoje: " + TodaysDate + "</span>");
+                </script>
+                <script>
+                    Date.prototype.getWeek = function () {
+                        var onejan = new Date(this.getFullYear(), 0, 1);
+                        return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 1) / 7);
+                    }
+                    var weekNumber = (new Date()).getWeek();
+                    var dayNames = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+                    var now = new Date();
+                    document.write("<span class='week'> (" + dayNames[now.getDay()] + ") da semana número " + weekNumber + " </span>");
+                </script>
+                </div>
+
+                <!---=====================Chart begins here====================-->
+                <div class="dash-chart-bg">
+            <canvas id="myChart" style="width:100%;max-width:450px"></canvas>
+            <script>
+                function makeChart(yValues, xValues, type) {
+                    //const xValues = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
+                    console.log(yValues);
+                    new Chart("myChart", {
+                        //type: "bar",
+                        type: type,
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                label: 'Resíduos Recicláveis (em Kg)',
+                                data: yValues,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: "green",
+                                hoverBackgroundColor: "gray",
+                                fill: true
+                            }]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: 'Resíduos Recicláveis Coletados na UFRN, em Kg, por semana'
+                            },
+                            legend: {
+                                display: true
+                            },
+                            // scales: {
+                            //     yAxes: [{
+                            //         ticks: {
+                            //             suggestedMin: 50,
+                            //             suggestedMax: 100
+                            //         }
+                            //     }]
+                            }
+                        }
+
+                    );
+                }
+            </script>
+
+            <script>
+                async function myData() {
+                    // Fetch the array from the server
+                    let response = await fetch('/csvdata1');
+                    const data = await response.json();
+                    return data
+                }
+                myData().then((y) => {
+                    makeChart(y, ["Papelão", "Vidro", "Plástico", "Metal", "Pet"], "pie");
+                });
+            </script>
+            </div>
+        </section>
+    </div>
+        <!-- =========================== SERVER INIT end here ============================= -->
+
+    </div>
+
+
+
+
+
+
+    <!-- ========================== footer start here =========================== -->
+
+    <footer class="footer">
+        <div class="footer-contact footer-item">
+            <span class="logo logo--white">
+                <a href="#">
+                    <div><img src="http://localhost:3000/img/logo-branca.png" alt="Logo"></div>
+                    <p>Portal de meio ambiente<br>da UFRN</p>
+                </a>
+            </span>
+            <p>Telefone: (84) 3342-2399 - Ramal 501</p>
+            <p>Celular/WhatsApp: (84) 99474-6790</p>
+            <p>E-mail: dmainfra@gmail.com</p>
+        </div>
+        <div class="footer-menu footer-item">
+            <ul>
+                <li><a href="https://www.facebook.com/dmacomunica/" target="_blank"><img
+                            src="http://localhost:3000/img/media/facebook-logo-white.png" alt="Facebook" class="fb"></a></li>
+                <li><a href="https://www.instagram.com/dmaufrn/?hl=pt-br" target="_blank"><img
+                            src="http://localhost:3000/img/media/instagram_PNG8-white.png" alt="Instagram" class="ig"></a></li>
+                <li><a href="#"><img src="http://localhost:3000/img/media/youtube-logo-white.png" alt="Youtube"></a></li>
+                <li><a href="#"><img src="http://localhost:3000/img/media/twitter-logo-white.png" alt="Youtube"></a></li>
+            </ul>
+        </div>
+        <div class="footer-cta footer-item">
+            <h3 data-changetext>Viu algo precisando de uma solução?</h3>
+            <div>
+                <a href="http://localhost:3000/contato.html" class="btn">Colabore</a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p class="copy ativo"><span class="copyright">&copy 2019 - 2024 </span>Dma Comunica</p>
+            <p class="credits"><span>Idealização: Jô Carvalho | </span>Desenvolvimento: Paulo Araujo e Lucas Macedo</p>
+        </div>
+    </footer>
+
+    <!-- ========================== footer end here ========================== -->
+
+
+
+
+
+
+
+    <!-- ========================== javascript start here ========================== -->
+
+    <script src="http://localhost:3000/js/libs/jquery-3.4.0.min.js" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    <script src="http://localhost:3000/js/libs/owl.carousel.min.js" async></script>
+    <script src="http://localhost:3000/js/libs/instafeed.min.js"></script>
+    <script type="module" src="http://localhost:3000/js/main.js"></script>
+
+    <!-- ========================== javascript start here ========================== -->
+</body>
+
+</html>
